@@ -1,0 +1,93 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-family: sans-serif;
+  background-color: #efefef;
+}
+
+.navbar-fixed-top {
+  box-shadow: 0px 0px 3px #000;
+  border-bottom: 1px solid #999;
+}
+
+.welcome-box {
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(200, 200, 200, .5);
+  box-shadow: 0px 0px 3px #bababa;
+  border: 1px solid #EDEDED;
+}
+
+.welcome-box h1 {
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.welcome-box p {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.welcome-box .btn-large {
+  margin-top: 20px;
+}
+
+.list-item {
+  margin-bottom: 20px;
+}
+
+.list-item div {
+  background: white;
+  border-bottom: 2px solid #ccc;
+}
+
+.list-item div > * {
+  padding: 20px;
+}
+
+.list-item div h3 i {
+  margin: 5px;
+}
+
+/* quick typography section */
+ol, ul {
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.brand {
+  white-space: nowrap;
+  font-family: "Aldrich", sans-serif;
+}
+
+.navbar .brand {
+  padding-top: 12px;
+  padding-bottom: 8px;
+  font-size: 24px;
+  color: #1c519d;
+  background-color: #ececec
+}
+
+.bullet-list {
+}
+
+.list-header {
+  display: block;
+  font-weight: bold;
+}
+
+@media (max-width:480px) {
+  .hero-unit .pull-right {
+    float: none;
+    margin-top: 10px;
+  }
+
+  .welcome-box h1 {
+    font-size: 40px;
+  }
+
+}
+

@@ -1,0 +1,66 @@
+[Sun, 28 Jul 2013 22:52:01 GMT] INFO Server starting with config: {
+  "environment": "development",
+  "workers": 1,
+  "port": 4000,
+  "spdy": null,
+  "ssl": null,
+  "flash": {
+    "defaultClass": "alert",
+    "inlineClasses": {
+      "success": "alert alert-success",
+      "alert": "alert",
+      "error": "alert alert-error",
+      "info": "alert alert-info"
+    },
+    "blockClasses": {
+      "success": "alert alert-block alert-success",
+      "alert": "alert alert-block",
+      "error": "alert alert-block alert-error",
+      "info": "alert alert-block alert-info"
+    }
+  },
+  "debug": true,
+  "rotateWorkers": false,
+  "rotationWindow": 7200000,
+  "rotationTimeout": 300000,
+  "logDir": "/Users/harouns/node/sigma/log",
+  "gracefulShutdownTimeout": 30000,
+  "heartbeatInterval": 5000,
+  "heartbeatWindow": 20000,
+  "staticFilePath": "/Users/harouns/node/sigma/public",
+  "cacheControl": {
+    "expires": {
+      "default": 0
+    }
+  },
+  "sessions": {
+    "store": "memory",
+    "key": "sid",
+    "expiry": 1209600
+  },
+  "cookieSessionKey": "sdata",
+  "i18n": {
+    "defaultLocale": "en-us",
+    "loadPaths": [
+      "/Users/harouns/node/sigma/config/locales"
+    ]
+  },
+  "hostname": null,
+  "fullHostname": null,
+  "connectCompatibility": false,
+  "detailedErrors": true,
+  "model": {
+    "defaultAdapter": "memory"
+  }
+}
+[Sun, 28 Jul 2013 22:52:01 GMT] INFO Creating 1 worker process.
+[Sun, 28 Jul 2013 22:52:01 GMT] INFO Server worker running in development on port 4000 with a PID of: 43250
+[Sun, 28 Jul 2013 22:53:14 GMT] INFO Code changed, killing 43250, cycling ...
+[Sun, 28 Jul 2013 22:53:14 GMT] INFO Creating 1 worker process.
+[Sun, 28 Jul 2013 22:53:14 GMT] INFO Server worker running in development on port 4000 with a PID of: 43260
+[Sun, 28 Jul 2013 22:53:44 GMT] INFO Code changed, killing 43260, cycling ...
+[Sun, 28 Jul 2013 22:53:44 GMT] INFO Creating 1 worker process.
+[Sun, 28 Jul 2013 22:53:44 GMT] INFO Server worker running in development on port 4000 with a PID of: 43268
+[Sun, 28 Jul 2013 22:54:19 GMT] INFO Code changed, killing 43268, cycling ...
+[Sun, 28 Jul 2013 22:54:19 GMT] INFO Creating 1 worker process.
+[Sun, 28 Jul 2013 22:54:19 GMT] INFO Server worker running in development on port 4000 with a PID of: 43273
