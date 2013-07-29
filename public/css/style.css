@@ -51,7 +51,7 @@ body {
 
 /* quick typography section */
 ol, ul {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 li {
@@ -76,6 +76,7 @@ li {
 
 .list-header {
   display: block;
+  font-size: 100%;
   font-weight: bold;
 }
 
