@@ -50,11 +50,12 @@ body {
 }
 
 /* quick typography section */
-ol, ul {
+[role="main"] ol,
+[role="main"] ul {
   margin-bottom: 25px;
 }
 
-li {
+[role="main"] li {
   margin-bottom: 10px;
 }
 
@@ -80,6 +81,18 @@ li {
   font-weight: bold;
 }
 
+.team-header {
+  padding: 3px 0 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.team-thumb {
+  height: 48px;
+  width: 48px;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+}
+
 @media (max-width:480px) {
   .hero-unit .pull-right {
     float: none;
@@ -88,6 +101,18 @@ li {
 
   .welcome-box h1 {
     font-size: 40px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
   }
 
 }

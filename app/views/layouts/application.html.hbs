@@ -39,16 +39,24 @@
           <a class="brand" href="{{mainsPath}}">Fifth Sigma</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active">{{{linkTo 'Home' mainsPath}}}</li>
-              <li>{{{linkTo 'Team' aboutsPath }}}</li>
-              <li>{{{linkTo 'Articles' articlesPath}}}</li>
-              <li>{{{linkTo 'Contact' contactsPath}}}</li>
+              <li class="{{{setActive options.activePage "home"}}}">
+                {{{linkTo 'Home' mainsPath}}}
+              </li>
+              <li class="{{{setActive options.activePage "about"}}}">
+                {{{linkTo 'Team' aboutsPath }}}
+              </li>
+              <li class="{{{setActive options.activePage "articles"}}}">
+                {{{linkTo 'Articles' articlesPath}}}
+              </li>
+              <li class="{{{setActive options.activePage "contact"}}}">
+                {{{linkTo 'Contact' contactsPath}}}
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" role="main">
       {{{displayFlash flash}}}
       {{{render}}}
     </div>
