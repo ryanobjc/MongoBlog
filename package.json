@@ -11,6 +11,7 @@
     "passport-yammer": "0.1.x",
     "bcrypt": "0.7.x",
     "node-markdown", "0.1.x",
+    "mongodb-wrapper", "1.0.x",
   },
   "devDependencies": {},
   "engines": {
