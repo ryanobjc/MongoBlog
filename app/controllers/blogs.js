@@ -33,11 +33,9 @@ var Blogs = function () {
   };
 
   this.create = function (req, resp, params) {
+      params.linktitle = params.title.replace(/[^a-zA-Z0-9]/g, "-");
     var self = this
       , blog = geddy.model.Blog.create(params);
-
-      // set linktitle
-      blog.linktitle = blog.title.replace(/[^a-zA-Z0-9]/g, "-");
 
     if (!blog.isValid()) {
       this.flash.error(blog.errors);
