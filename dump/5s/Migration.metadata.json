@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Migration" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "5s.Migration", "name" : "_id_" } ] }
