@@ -3,9 +3,11 @@ var passport = require('../helpers/passport')
   , requireAuth = passport.requireAuth;
 
 var Users = function () {
-  this.before(requireAuth, {
-    except: ['add', 'create']
-  });
+  //this.before(requireAuth, {
+  //  except: ['add', 'create']
+  //});
+  // for install, turn off requiresAuth temp! wow!
+  this.before(requireAuth);
 
   this.respondsWith = ['html', 'json', 'xml', 'js', 'txt'];
 

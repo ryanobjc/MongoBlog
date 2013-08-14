@@ -21,7 +21,7 @@ var Blogs = function () {
         data.user = user;
         data.authType = authTypes[self.session.get('authType')].name;
       }
-	geddy.model.Blog.all(function(err, blogs) {
+	geddy.model.Blog.all({}, {createdAt: 'desc'}, function(err, blogs) {
 	    self.respond({user: data.user, authType: user.authType, 
 			  params: params, blogs: blogs});
 	});

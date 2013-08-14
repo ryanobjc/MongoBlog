@@ -1,3 +1,4 @@
+  <%- linkTo('Manage users', usersPath); %>
 <div class="hero-unit">
   <h2>All Blogs</h2>
   <%- linkTo('Create a new Blog', addBlogPath, {class: 'btn pull-right'}); %>
@@ -9,9 +10,6 @@
   <div class="row list-item" id="blog-<%= blogs[i].id; %>">
     <div class="span8">
       <h3><%- linkTo(blogs[i].title, blogPath(blogs[i].id)); %></h3>
-    </div>
-    <div class="span4">
-      <h3><i class="icon-list-alt"></i><%= blogs[i].id; %></h3>
     </div>
   </div>
 <% } %>
