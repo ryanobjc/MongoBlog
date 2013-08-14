@@ -22,6 +22,7 @@ var router = new geddy.RegExpRouter();
 router.get('/').to('Main.index');
 router.get('/about').to('About.index');
 router.get('/articles').to('Articles.index');
+router.get('/articles/:title').to('Articles.article');
 router.get('/contact').to('Contact.index');
 
 // Basic routes
@@ -42,4 +43,5 @@ router.get('/contact').to('Contact.index');
 //   this.get('/print(.:format)').to('Hemispheres.print');
 // });
 
+router.resource('blogs');
 exports.router = router;

@@ -1,4 +1,3 @@
-(function () {
 var Blog = function () {
 
   this.defineProperties({
@@ -48,4 +47,3 @@ Blog.someStaticProperty = 'YYZ';
 
 exports.Blog = Blog;
 
-}());

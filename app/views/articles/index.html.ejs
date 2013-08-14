@@ -1,0 +1,16 @@
+<section>
+<% if (blogs) { %>
+<% for (var i = 0, ii = blogs.length; i < ii; i++) { %>
+   <% if (blogs[i].status == 'published') { %>
+   <div class="well">
+     <article class="row-fluid">
+       <h2><a href="/articles/<%= blogs[i].linktitle %>"><%= blogs[i].title %></a></h2>
+       <p><%- md(truncate(blogs[i].body, {length: 1000})) %> </p>
+       <p><strong>Author: <%= blogs[i].author %></strong></p>
+       
+     </article>
+   </div>
+<% } %>
+<% } %>
+<% } %>
+</section>
