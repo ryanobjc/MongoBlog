@@ -6,6 +6,7 @@ var Blog = function () {
     status: {type: 'string'},
     linktitle: {type: 'string', required: true},
     author: {type: 'string'},
+    postDate: {type: 'date'},
   });
 
   //this.validatesFormat('linktitle', /[a-zA-Z0-9-]/, {message: 'Link title wrong'});

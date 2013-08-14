@@ -23,6 +23,7 @@ router.get('/').to('Main.index');
 router.get('/about').to('About.index');
 router.get('/articles').to('Articles.index');
 router.get('/articles/:title').to('Articles.article');
+router.get('/articles/author/:author').to('Articles.byAuthor');
 router.get('/contact').to('Contact.index');
 
 // Basic routes

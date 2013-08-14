@@ -4,3 +4,10 @@ exports.setActive = function setActive(currentState, activeState) {
 
   return (currentState === activeState) ? "active" : "";
 };
+exports.postDate = function postDate(maybeDate) {
+  if (maybeDate instanceof Date) {
+      return maybeDate.toDateString();
+  } else {
+      return "";
+  }
+}

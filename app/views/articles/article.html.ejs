@@ -4,7 +4,8 @@
 <article class="row-fluid">
   <h2><%= blog.title %></h2>
   <p><%- md(blog.body) %> </p>
-<p><strong>Author: <%= blog.author %></strong></p>
+  <p><strong>Author: <%- linkTo(blog.author, byAuthorPath(blog.author)) %></strong><br>
+  <i><%- postDate(blog.postDate) %></i></p>
 </article>
 
 </div>

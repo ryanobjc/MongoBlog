@@ -17,7 +17,7 @@
       </div>
       <% } %>
 
-      <%- partial('form', {blog: {}}) %>
+      <%- partial('form', {blog: {postDate: new Date()}}) %>
 
       <div class="form-actions">
         <%- contentTag('input', 'Add', {type: 'submit', class: 'btn btn-primary'}) %>

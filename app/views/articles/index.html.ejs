@@ -9,7 +9,8 @@
        <% if (blogs[i].body.length > 1000) { %>
            <p><a href="/articles/<%= blogs[i].linktitle %>">Read more...</a></p>
        <% } %>
-       <p><strong>Author: <%= blogs[i].author %></strong></p>
+       <p><strong>Author: <%- linkTo(blogs[i].author, byAuthorPath(blogs[i].author)) %></strong><br>
+	 <i><%- postDate(blogs[i].postDate) %></i></p>
        
      </article>
    </div>

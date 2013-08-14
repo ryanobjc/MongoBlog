@@ -1,13 +1,24 @@
 var Articles = function () {
     var md = require("node-markdown").Markdown;
 
+  this.byAuthor = function(req, resp, params) {
+      var self = this;
+      var options = { "activePage": "articles" };
+      geddy.model.Blog.all({author: params.author}, {sort: {postDate: 'desc'}}, function(err, blogs) {
+	  self.respond( {params: params, options: options, blogs: blogs, md: md}, {
+	      format: 'html',
+	      template: 'app/views/articles/index'
+	  });
+      });
+  }
+
   this.index = function (req, resp, params) {
       var self = this;
       var options = {
 	  "activePage": "articles"
       };
       
-      geddy.model.Blog.all({}, {sort: {createdAt: 'desc'}}, function(err, blogs) {
+      geddy.model.Blog.all({}, {sort: {postDate: 'desc'}}, function(err, blogs) {
 	  self.respond({params: params, options: options, blogs: blogs, md: md}, {
 	      format: 'html'
 //	      , template: 'app/views/articles/index'
