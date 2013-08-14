@@ -26,7 +26,7 @@ var config = {
 , db: {
     mongo: {
       username: null
-    , dbname: 'production'
+    , dbname: '5s'
     , prefix: null
     , password: null
     , host: 'localhost'
