@@ -1,11 +1,30 @@
+var strategies = require('../helpers/passport/strategies')
+  , authTypes = geddy.mixin(strategies, {local: {name: 'local account'}});;
+
 var Blogs = function () {
+    var passport = require('../helpers/passport')
+    , cryptPass = passport.cryptPass
+    , requireAuth = passport.requireAuth;
+    
+  this.before(requireAuth);
   this.respondsWith = ['html', 'json', 'xml', 'js', 'txt'];
 
   this.index = function (req, resp, params) {
-    var self = this;
-
-    geddy.model.Blog.all(function(err, blogs) {
-      self.respond({params: params, blogs: blogs});
+    var self = this
+      , User = geddy.model.User;
+    User.first({id: this.session.get('userId')}, function (err, user) {
+      var data = {
+        user: null
+      , authType: null
+      };
+      if (user) {
+        data.user = user;
+        data.authType = authTypes[self.session.get('authType')].name;
+      }
+	geddy.model.Blog.all(function(err, blogs) {
+	    self.respond({user: data.user, authType: user.authType, 
+			  params: params, blogs: blogs});
+	});
     });
   };
 

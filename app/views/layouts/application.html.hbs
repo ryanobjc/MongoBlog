@@ -53,6 +53,12 @@
               </li>
             </ul>
           </div><!--/.nav-collapse -->
+	  {{#if user}}
+	  <p class="navbar-text pull-right">
+	    Logged in as {{{linkTo user.username '/logout'}}}
+	  </p>
+	  {{/if}}
+	  </p>
         </div>
       </div>
     </div>
