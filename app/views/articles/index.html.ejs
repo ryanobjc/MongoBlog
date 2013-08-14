@@ -6,6 +6,9 @@
      <article class="row-fluid">
        <h2><a href="/articles/<%= blogs[i].linktitle %>"><%= blogs[i].title %></a></h2>
        <p><%- md(truncate(blogs[i].body, {length: 1000})) %> </p>
+       <% if (blogs[i].body.length > 1000) { %>
+           <p><a href="/articles/<%= blogs[i].linktitle %>">Read more...</a></p>
+       <% } %>
        <p><strong>Author: <%= blogs[i].author %></strong></p>
        
      </article>
