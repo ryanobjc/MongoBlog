@@ -4,22 +4,13 @@ var strategies = require('../helpers/passport/strategies')
 var Main = function () {
 
   this.index = function (req, resp, params) {
-    var self = this
-      , User = geddy.model.User;
-    User.first({id: this.session.get('userId')}, function (err, user) {
-      var data = {
-        user: null
-      , authType: null
-      };
-      if (user) {
-        data.user = user;
-        data.authType = authTypes[self.session.get('authType')].name;
-      }
-      self.respond(data, {
+     var options = {
+       "activePage": "home"
+     }
+     this.respond({options: options, params: params}, {
         format: 'html'
       , template: 'app/views/main/index'
       });
-    });
   };
 
   this.login = function (req, resp, params) {
