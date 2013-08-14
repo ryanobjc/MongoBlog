@@ -2,6 +2,9 @@
 <div class="hero-unit">
   <h2>All Blogs</h2>
   <%- linkTo('Create a new Blog', addBlogPath, {class: 'btn pull-right'}); %>
+  <p>Nb: status == 'published' shows up only.  All other strings => ignored post.</p>
+  <p>Author is just a text field, no ties to users. Please use lowercase 'alex' 'tim' 'ryan'!</p>
+  <p>Blog text is in <a href="http://daringfireball.net/projects/markdown/syntax">markdown</a></p>
 </div>
 
 <div id="blogs-list">
